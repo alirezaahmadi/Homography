@@ -79,7 +79,7 @@ def homography(targetImage, sourceImage, minMatchPoint):
         img3 = cv.drawMatches(targetImage,kp1,sourceImage,kp2,good,None,**draw_params)
         plt.imshow(img3, 'gray'),plt.show()
 
-        warp = cv.warpPerspective(sourceImage, M, (sourceImage.shape[1], sourceImage.shape[0]))
+        warp = cv.warpPerspective(sourceImage, M, (sourceImage.shape[1], sourceImage.shape[0]), flags=cv.WARP_INVERSE_MAP)
 
         alpha = 0.5
         beta = (1.0 - alpha)
