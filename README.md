@@ -15,6 +15,7 @@ python3 Homography.py images/target.png images/source.png images/homography_resu
 **To get Help option **
 
 python Homography.py -h
+
 usage: Homography.py [-h] target_img source_img output_dir
 
 Register a Depth/IR image to an RGB image
