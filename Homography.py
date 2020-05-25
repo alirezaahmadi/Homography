@@ -38,7 +38,10 @@ def main():
     target_gray= cv.cvtColor(targetImage, cv.COLOR_BGR2GRAY)
     source_gray= cv.cvtColor(sourceImage, cv.COLOR_BGR2GRAY)
 
-    homography(target_gray, source_gray, minMatchPoint = MIN_MATCH_COUNT)      
+    result = homography(target_gray, source_gray, minMatchPoint = MIN_MATCH_COUNT) 
+
+    cv.imwrite(args.output_dir, result)     
+
     return
 
 def homography(targetImage, sourceImage, minMatchPoint):
@@ -91,6 +94,8 @@ def homography(targetImage, sourceImage, minMatchPoint):
     else:
         print( "Not enough matches are found - {}/{}".format(len(good), MIN_MATCH_COUNT) )
         matchesMask = None
+    
+    return dst
 
    
 if __name__ == "__main__":
