@@ -5,7 +5,7 @@ A python implementation of homography algorithm by SIFT descriptors
 ## Dependencies
 install opencv and opencv-contribLib using 
 
-pip install opencv-python opencv-contrib-python-nonfree
+pip install opencv-python opencv-contrib-python
 
 ## Example Command o run
 
